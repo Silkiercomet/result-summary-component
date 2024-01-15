@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+:root{
+    --lightRed: hsl(0, 100%, 67%);
+    --orangeyYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --darkGray: hsl(224, 30%, 27%);
+
+    --bgGradient: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --circleBg : linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0))
+}
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+margin: 0;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+font-family: 'Hanken Grotesk', sans-serif;
+min-height: 100vh;
+}
+/*
+5. Improve media defaults
+*/
+img, svg {
+display: block;
+max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+button {
+font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+ul{
+    padding-left: 0;
+    list-style: none;
+}
+
+/* result showcase */
+
+.result__showcase{
+    display: grid;
+    place-items: center;
+    padding:30px 25px;
+    gap: 20px;
+
+    background: var(--bgGradient);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+.result__showcase{
+    color: var(--lightLavender);
+}
+.result__showcase h1{
+    font-size: 1.2rem;
+}
+.result__showcase_average{
+    padding: 25px 40px;
+    border-radius: 50%;
+
+    text-align: center;
+    background: var(--circleBg);
+}
+.result__showcase_average p:first-of-type{
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--paleBlue);
+    line-height: 1.3;
+}
+.result__showcase div:last-of-type{
+    text-align: center;
+    max-width: 30ch;
+}
+.result__showcase div:last-of-type p:first-of-type{
+    color: var(--paleBlue);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* result showcase */
+
+/* summary */
+
+.result__summary{
+    display: grid;
+    gap: 20px;
+
+    padding: 20px 25px;
+}
+.result__summary h2{
+    color: var(--darkGray);
+}
+.result__summary ul li, .result__summary ul li span{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+} 
+.result__summary ul li{
+    padding: 10px 15px;
+    background-color: var(--paleBlue);
+}
+.result__summary ul li span:last-of-type{
+    margin-left: auto;
+}
+/* summary */
